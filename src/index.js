@@ -2,6 +2,8 @@ import React from 'react'
 import ReactDom from 'react-dom'
 import AppRouter from "./router"
 import './assets/css/test.less'
+import './assets/css/reset.css'
+
 class App extends React.Component {
     render(){
         return (

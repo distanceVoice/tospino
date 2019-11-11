@@ -6,31 +6,31 @@
 import React from "react"
 import { Route,BrowserRouter,Link,Switch } from "react-router-dom"
 import HomeIndex from "./home"
-import BlogIndex from "./blog"
-import ResumeIndex from "./resume"
-import UserIndex from "./user"
+import CartIndex from "./cart"
+import MineIndex from "./mine"
+import SortIndex from "./sort"
+
 class AppRouter extends React.Component {
     render(){
         return (
             <BrowserRouter>
-                <ul>
+                <ul className="router-navs">
                     <li><Link to="/home">home</Link></li>
-                    <li><Link to="/blog">blog</Link></li>
-                    <li><Link to="/resume">resume</Link></li>
-                    <li><Link to="/user">user</Link></li>
+                    <li><Link to="/sort">sort</Link></li>
+                    <li><Link to="/cart">cart</Link></li>
+                    <li><Link to="/mine">mine</Link></li>
                 </ul>
                 <div>
                     {/* Switch只显示一个组件。加exact表示精确匹配/。如果不加exact，/xxx也会匹配/。  */}
                     <Switch>
                         {/* exact */}
                         <Route path="/home" component={HomeIndex} />
-                        <Route exact path="/blog" component={BlogIndex}/>
-                        <Route exact path="/resume" component={ResumeIndex}/>
-                        <Route exact path="/user" component={UserIndex}/>
+                        <Route exact path="/sort" component={SortIndex}/>
+                        <Route exact path="/cart" component={CartIndex}/>
+                        <Route exact path="/mine" component={MineIndex}/>
                     </Switch>
                 </div>
             </BrowserRouter>
         )
-    }
-}
+    }}
 export default AppRouter;
