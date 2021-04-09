@@ -5,7 +5,6 @@
  */
 import React, { Fragment } from "react";
 import Search from "./views/Search.jsx";
-
 export default class HomeIndex extends React.Component {
   render() {
     return (

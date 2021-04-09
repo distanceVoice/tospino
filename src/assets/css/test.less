@@ -1,22 +1,39 @@
 .test2 {
-    font-size: 32px;
-    color: #F1F4F4
+  font-size: 32px;
+  color: #f1f4f4;
 }
 
 .router-navs {
-    width: 100%;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  li {
+    float: left;
+    width: 25%;
     height: auto;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-    li {
-        float: left;
-        width: 25%;
-        height: auto;
-        list-style: none;
-        text-align: center;
-        a {
-            text-decoration: none;
-        }
+    list-style: none;
+    text-align: center;
+    a {
+      text-decoration: none;
     }
+  }
+}
+
+.topic {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  .log {
+    max-width: 100%;
+    border: 1px solid red;
+  }
+  .search {
+    flex: 1;
+  }
+  .function {
+    border: 1px solid red;
+  }
 }
